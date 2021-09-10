@@ -20,7 +20,6 @@ export class ComoUsarComponent implements OnInit {
   ngOnInit(): void {
     this.ofertasService.comoUsarOfertaPorId(this.route.parent?.snapshot.params['id'])
       .then((descricao: any)=>{
-        console.log(descricao)
         this.comoUsar = descricao
       })
   }
