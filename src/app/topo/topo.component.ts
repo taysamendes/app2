@@ -21,7 +21,8 @@ export class TopoComponent implements OnInit {
   public pesquisa(termoDaPesquisa: string): void {
    this.ofertas =  this.ofertasService.pesquisaOfertas(termoDaPesquisa)
    this.ofertas.subscribe(
-    (data: Oferta[]) => console.log(data)
+    (data: Oferta[]) => console.log(data),
+    (error: any) => console.log('Erro status: ',error.status)
    )
      
   }

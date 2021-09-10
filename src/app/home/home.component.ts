@@ -23,8 +23,7 @@ export class HomeComponent implements OnInit {
         console.log('A funcao resolve foi resolvida ')
         this.ofertas = ofertas
       })
-      .catch((error: any) => {
-        console.log(error.msgErro)
+      .catch(() => {
       })
 
   }
