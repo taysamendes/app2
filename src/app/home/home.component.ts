@@ -1,6 +1,6 @@
+import { Oferta } from './../shared/oferta.model';
 import { Component, OnInit } from '@angular/core';
-import { OfertasService } from '../ofertas.service';
-import { Oferta } from '../shared/oferta.model';
+import { OfertasService } from '../ofertas.service'
 
 @Component({
   selector: 'app-home',
@@ -10,22 +10,20 @@ import { Oferta } from '../shared/oferta.model';
 })
 export class HomeComponent implements OnInit {
 
-  public ofertas: Oferta[] = []
+  public ofertas!: Oferta[]
 
   constructor(private ofertasService: OfertasService) { }
 
   ngOnInit(): void {
-    // this.ofertas = this.ofertasService.getOfertas()
-    // console.log(this.ofertas)
-
+    //this.ofertas = this.ofertasService.getOfertas()
+    //console.log(this.ofertas)
     this.ofertasService.getOfertas()
       .then((ofertas: Oferta[]) => {
-        console.log('A funcao resolve foi resolvida ')
         this.ofertas = ofertas
       })
-      .catch(() => {
+      .catch((param: any) => {
+  
       })
-
   }
 
 }

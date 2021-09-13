@@ -13,15 +13,15 @@ export class ComoUsarComponent implements OnInit {
   public comoUsar: string = ''
 
   constructor(
-    private route: ActivatedRoute,
-    private ofertasService: OfertasService
-    ) { }
+        private route: ActivatedRoute, 
+        private ofertasService: OfertasService
+  ) { }
 
-  ngOnInit(): void {
-    this.ofertasService.comoUsarOfertaPorId(this.route.parent?.snapshot.params['id'])
-      .then((descricao: any)=>{
+  ngOnInit(): void {  
+    this.ofertasService.getComoUsarOfertaPorId(this.route.parent?.snapshot.params['id']) 
+      .then((descricao: string) => {
         this.comoUsar = descricao
-      })
+      })                   
   }
 
 }
