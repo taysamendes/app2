@@ -19,7 +19,8 @@ import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 
 //pipe personalizado
-import { DescricaoReduzida } from './util/descricao-reduzida.pipe'
+import { DescricaoReduzida } from './util/descricao-reduzida.pipe';
+import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component'
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -34,7 +35,7 @@ registerLocaleData(localePt, 'pt-BR');
     OfertaComponent,
     ComoUsarComponent,
     OndeFicaComponent, 
-    DescricaoReduzida
+    DescricaoReduzida, OrdemCompraComponent
   ],
   imports: [
     BrowserModule,
